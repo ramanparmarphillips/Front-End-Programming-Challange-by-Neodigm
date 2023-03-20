@@ -154,6 +154,8 @@
             grid-gap: 1rem;
             display: none;
             padding: 20px 20px;
+            justify-items: center;
+
         }    
             
         .card {
@@ -344,12 +346,13 @@
         @media screen and (max-width: 768px) {
             .content {
                 grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
             }
         }
 
         @media screen and (min-width: 768px) and (max-width: 1400px) {
             .content {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
         }
         /* ============= */
@@ -489,6 +492,11 @@
             } else if (addDiv.dataset.productCategory === 'napkins') {
             prodCatNapkins.appendChild(addDiv)
             }
+
+
+            addProductTitle.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
             
             //LIKE BUTTON FUNCTIONALITY
             addLikeButton.addEventListener('click', () => {
